@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff0f5"><title>A Little Game About Us ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div class="float-hearts" aria-hidden="true">♡　♥　♡　♥　♡　♥</div>
+<main>
+<section id="welcome" class="panel hero">
+ <div class="bigheart">💗</div><div class="eyebrow">A little something made with love</div>
+ <h1>A Little Game<br>About Us</h1>
+ <p>Questions, confessions, a little mischief… and a whole lot of us.<br>Take your time, be honest, and have fun, baby. ❤️</p>
+ <button class="primary" id="start">Let's play 💌</button>
+ <p class="small">No wrong answers here. Just laughter, honesty and love.</p>
+</section>
+<section id="game" class="panel hide">
+ <div class="top"><span id="section"></span><span id="count"></span></div><div class="track"><div id="bar"></div></div>
+ <div id="qwrap"><span class="kind" id="kind"></span><h2 id="question"></h2><p id="hint" class="hint"></p><div id="choices" class="choices"></div><textarea id="typed" class="hide" placeholder="Take your time… type your answer here."></textarea></div>
+ <div class="nav"><button class="secondary" id="back">← Back</button><button class="primary" id="next">Next 💗</button></div>
+</section>
+<section id="done" class="panel hero hide">
+ <div class="bigheart">💞</div><div class="eyebrow">That's my girl</div><h1>Thank you, baby.</h1>
+ <p>I don't expect us to be perfect. I just want us to keep choosing each other, communicating, learning and becoming better together. ❤️</p>
+ <p>Your answers are ready to send privately.</p><button class="primary" id="send">Send your answers 💌</button><p id="sendstatus" class="small" aria-live="polite"></p>
+</section>
+<section id="adminLogin" class="panel auth hide">
+ <div class="eyebrow">Private area</div><h1>Your answers dashboard 🔐</h1>
+ <p class="hint">Sign in with the private dashboard account you created in Supabase.</p>
+ <label>Email <input id="adminEmail" type="email" autocomplete="username" placeholder="Your admin email"></label>
+ <label>Password <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Your password"></label>
+ <button class="primary" id="login">Unlock dashboard</button><p id="loginStatus" class="small" aria-live="polite"></p>
+</section>
+<section id="dashboard" class="panel hide">
+ <div class="dashhead"><div><div class="eyebrow">Just for you</div><h1>Her answers ❤️</h1></div><button class="secondary" id="logout">Log out</button></div>
+ <p class="hint">Only your authenticated dashboard account can read submitted answers.</p><div id="submissions"></div><p id="dashStatus" class="small"></p>
+</section>
+</main>
+<footer>Made with love, just for you. ❤️</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
